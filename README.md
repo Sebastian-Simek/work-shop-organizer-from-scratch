@@ -24,3 +24,19 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
+#1
+    make Supabase tables:
+        add 'dummy' entries for workshops
+        foreign key on workshop ids and tie to participants
+    
+    Make new pages
+        create page:
+        add form and inputs/button/select to add users
+        generate select from Supabase table
+
+        Display page: 
+        add render functions to display workshops with participants
+        add click handler to delete users on each div
+
+
