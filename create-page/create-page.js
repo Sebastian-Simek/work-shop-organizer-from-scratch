@@ -7,6 +7,7 @@ const inputForm = document.getElementById('input-form');
 const selectEl = document.getElementById('select-form');
 const workshopForm = document.getElementById('workshop-form');
 
+
 window.addEventListener('load', async () => {
     const workshops = await getWorkshops();
 
@@ -45,4 +46,3 @@ inputForm.addEventListener('submit', async (e) => {
 logoutButton.addEventListener('click', () => {
     logout();
 });
-
