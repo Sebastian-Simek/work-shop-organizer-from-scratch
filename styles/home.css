@@ -1,1 +1,14 @@
-/* add home page styles here */
+#workshop-container {
+    width: 80%;
+    min-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.workshops {
+    width: 200px;
+    margin: 10px;
+    border: solid 1px black;
+    padding: 10px;
+}
