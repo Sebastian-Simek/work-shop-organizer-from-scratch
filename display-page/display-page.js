@@ -1,4 +1,4 @@
-import { getWorkshops } from '../fetch-utils.js';
+import { deleteParticipant, getWorkshops } from '../fetch-utils.js';
 
 const workshopsEl = document.getElementById('workshop-container');
 
@@ -16,6 +16,11 @@ async function displayWorkshops() {
         for (let participant of workshop.participants) {
             const li = document.createElement('li');
             li.textContent = `${participant.name} Contact Info: ${participant.contact}`;
+            li.addEventListener('click', async () => {
+                alert('i clicked');
+                await deleteParticipant(participant.id);
+                displayWorkshops();
+            });
 
             ul.append(li);
             div.append(ul);

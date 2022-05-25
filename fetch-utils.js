@@ -45,3 +45,18 @@ export async function getWorkshops() {
     const response = await client.from('workshops').select('*, participants(*)');
     return checkError(response);
 }
+
+export async function deleteParticipant(id) {
+    const response = await client.from('participants').delete().eq('id', id);
+    return checkError(response);
+}
+
+export async function addParticipant(participants, contact, id) {
+    const response = await client.from('participants').insert(participants, contact, id);
+    return checkError(response);
+}
+
+export async function addWorkshop(workshop) {
+    const response = await client.from('workshops').insert(workshop);
+    return checkError(response);
+}

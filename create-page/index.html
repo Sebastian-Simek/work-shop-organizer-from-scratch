@@ -18,10 +18,34 @@
         <div class="gutter-right logo">
             <img src="../assets/big-logo.png" />
         </div>
-    </header>    
-    <button id="logout">Logout</button>
+    </header>
+    <div class="butt-div">
+        <button id="logout">Logout</button>
+        <button id="workshops-page">See workshops</button>
+    </div>    
     <main>
-        <h1>You are logged in!</h1>
+        <div class="add-stuff">
+            <h1>Add Participant</h1>
+            <form id="input-form">
+                <select id="select-form" name="workshop_id"></select>
+                <label>Name:
+                    <input name="name">
+                </label>
+                <label>Contact Info:
+                    <input name="contact-info">
+                </label>
+                <button class="button">Submit</button>
+            </form>
+        </div>
+        <div class="add-stuff">
+            <h1>Add new workshop</h1>
+            <form id="workshop-form">
+                <label>Workshop Name:
+                    <input name="name">
+                </label>
+                <button class="button">Submit</button>
+            </form>
+        </div>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
